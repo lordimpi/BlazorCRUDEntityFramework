@@ -1,1 +1,1 @@
-# BlazorCRUDEntityFramework
+# Blazor CRUD Entity Framework
