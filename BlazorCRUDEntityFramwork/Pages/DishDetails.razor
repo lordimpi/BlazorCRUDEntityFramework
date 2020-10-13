@@ -1,0 +1,33 @@
+﻿@page "/dishDetails"
+@inject IDishService DishService
+
+<h1>Dish Details</h1>
+
+<EditForm Model="dish">
+    <table class="table">
+        <tr>
+            <td>Nombre:</td>
+            <td><input class="form-control col-sm-4" type="text" @bind="dish.Name" /></td>
+        </tr>
+        <tr>
+            <td>Precio:</td>
+            <td><input class="form-control col-sm-4" type="text" @bind="dish.Price" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="Guardar" @onclick="SaveDish"/>
+                <input type="button" value="Cancel" />
+            </td>
+        </tr>
+    </table>
+</EditForm>
+
+@code {
+    private Dish dish = new Dish();
+
+    protected async Task SaveDish()
+    {
+        await DishService.SaveDish(dish);
+    }
+}
