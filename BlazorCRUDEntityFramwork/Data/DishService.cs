@@ -1,4 +1,5 @@
 ﻿using BlazorCRUDEntityFramwork.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,22 +25,36 @@ namespace BlazorCRUDEntityFramwork.Data
 
         public async Task<IEnumerable<Dish>> GetAllDish()
         {
-            throw new NotImplementedException();
+            return await _dataContext.Dish.ToListAsync();
         }
 
         public async Task<Dish> GetDishDetails(int id)
         {
-            throw new NotImplementedException();
+            return await _dataContext.Dish.FindAsync(id);
         }
 
         public async Task<bool> InsertDish(Dish dish)
         {
-            throw new NotImplementedException();
+            _dataContext.Dish.Add(dish);
+            return await _dataContext.SaveChangesAsync() > 0;
         }
-
         public async Task<bool> UpdateDish(Dish dish)
         {
-            throw new NotImplementedException();
+            _dataContext.Entry(dish).State = EntityState.Modified;
+            return await _dataContext.SaveChangesAsync() > 0;
         }
+        public async Task<bool> SaveDish(Dish dish)
+        {
+            if (dish.DishId > 0)
+            {
+                return await UpdateDish(dish);
+            }
+            else
+            {
+                return await InsertDish(dish);
+            }
+        }
+
+
     }
 }

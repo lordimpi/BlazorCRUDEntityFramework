@@ -13,6 +13,6 @@ namespace BlazorCRUDEntityFramwork.Data
         Task<bool> InsertDish(Dish dish);
         Task<bool> UpdateDish(Dish dish);
         Task<bool> DeleteDish(int id);
-
+        Task<bool> SaveDish(Dish dish);
     }
 }
