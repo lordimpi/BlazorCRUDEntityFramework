@@ -88,3 +88,7 @@ C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\
 C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
 C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\DishDetails.razor.g.cs
 C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\Razor\Pages\DishDetails.razor.g.cs
+C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\DishList.razor.g.cs
+C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\Razor\Pages\DishList.razor.g.cs
+C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\DishDelete.razor.g.cs
+C:\Users\snt-2\Desktop\S2\BlazorCRUDEntityFramwork\BlazorCRUDEntityFramwork\obj\Debug\netcoreapp3.1\Razor\Pages\DishDelete.razor.g.cs

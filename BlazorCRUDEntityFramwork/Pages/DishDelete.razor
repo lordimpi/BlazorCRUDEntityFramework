@@ -1,9 +1,10 @@
-﻿@page "/dishDetails"
-@page "/dishDetails/{id:int}"
+﻿@page "/dishDelete/{id:int}"
 @inject IDishService DishService
 @inject NavigationManager NavigationManager
 
-<h1>Dish Details</h1>
+<h1>Dish Delete</h1>
+
+<p style="color:red; text-align:center">Are you sure want to delete this dish?</p>
 
 <EditForm Model="dish">
     <table class="table">
@@ -18,7 +19,7 @@
 
         <tr>
             <td colspan="2" style="text-align:center">
-                <input type="submit" value="Guardar" @onclick="SaveDish" />
+                <input type="submit" value="Delete" @onclick="DeleteDish" />
                 <input type="button" value="Cancel" @onclick="Cancel" />
             </td>
         </tr>
@@ -27,21 +28,18 @@
 
 @code {
     [Parameter]
-    public int Id { get; set; }
+    public int id { get; set; }
 
     private Dish dish = new Dish();
 
     protected override async Task OnInitializedAsync()
     {
-        if (Id != 0)
-        {
-            dish = await DishService.GetDishDetails(Id);
-        }
+        dish = await DishService.GetDishDetails(id);
     }
 
-    protected async Task SaveDish()
+    protected async Task DeleteDish()
     {
-        await DishService.SaveDish(dish);
+        await DishService.DeleteDish(id);
         NavigationManager.NavigateTo("/");
     }
 
